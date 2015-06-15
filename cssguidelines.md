@@ -5,7 +5,7 @@ Below are Best Practices and Guidelines that the Enterprise software UX group in
  
 ###General Guidelines
 **Syntax**
-- 4 space tabs soft tabs (2) spaces (edited)
+- 4 space tabs
 - When grouping selectors, place individual selectors on their own line
 ```css 
 .class1,
