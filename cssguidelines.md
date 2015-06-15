@@ -121,9 +121,9 @@ The trick with BEM is knowing when something falls into a relevant category. Jus
  - use double dashes to separate block name and modifier name: `block-name—modifier-name`
  
 **Examples:**
-`.btn {} /* Block */  
-.btn__content {} /* Element */  
-.btn--big {} /* Modifier */`
+`    .btn {} /* Block */  
+    .btn__content {} /* Element */  
+    .btn--big {} /* Modifier */`
 
 
 
