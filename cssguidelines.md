@@ -34,7 +34,7 @@ Below are Best Practices and Guidelines that the Enterprise software UX group in
 ```css 
 .selector {
   background-color: rgba(0,0,0,.5);
-  box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;`
+  box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
 }
 ```
 
@@ -54,12 +54,10 @@ The key to solving a lot of CSS tangle and headaches is keeping specificity of y
    - `input.error` is more specific and less reusable than `.error`
 
 
-**!important**
-
+**!important**  
 Use `!important` proactively, not reactively. Use it to make sure nothing overwrites a declaration. i.e. `display: none !important;` If you find yourself having to use it to overwrite other styles something is probably wrong.
 
-**Shorthand**
-
+**Shorthand**  
 Try to limit use of shorthand declarations to instances where you must explicitly set all available values. Setting unnecessary values in shorthand leads to unnecessary overrides and unintended side effects.
 ```css
 /* Bad example */
@@ -76,8 +74,7 @@ Try to limit use of shorthand declarations to instances where you must explicitl
 
 ```
 
-**Prefixed properties**
-
+**Prefixed properties**  
 Indent prefixed properties so declaration values line up:
 ```css
 .selector {
@@ -87,8 +84,7 @@ Indent prefixed properties so declaration values line up:
 }
 ```
 
-**Declaration Order**
-
+**Declaration Order**  
 Group property declarations in following order:
 1. Positioning
 2. Box Model
@@ -99,18 +95,16 @@ Positioning comes first, it can override box-model styles.<br/>
 Box Model next as it sets dimensions and placement.<br/>
 The others affect things inside component so they come last.
 
-**Nesting**
-
+**Nesting**  
 Limit nesting to when you must scope styles to a parent and if there are multiple items to be nested. (Exception, scoping for app/module styles)
 
-**Media Query Placement**
-
+**Media Query Placement**  
 When possible, place media queries as close to their relevant rule sets as possible. Keeping them together makes it harder to miss them.
 
 ###Organizing your CSS
-**Section titles**
-
+**Section titles**  
 Major sections of CSS should start with a title. Title should begin with `#` to help with targeted searches. 
+
 Titles should be followed by a return to space out following CSS code, and preceded by 5 returns when not the first title in a document.
 ```css
 /*---------------#SECTION TITLE---------------*/
