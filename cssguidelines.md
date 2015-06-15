@@ -13,9 +13,11 @@ Below are Best Practices and Guidelines that the Enterprise software UX group in
 }
 ```
 - Include one space before open brace, closing on new line.
-`.class {
+```css
+.class {
     /* code here */
-}``
+}
+```
 - Put one space after colons `:` for each declaration and close all declarations with a semi-colon `;`
 ```css
 .selector {
@@ -145,8 +147,13 @@ The trick with BEM is knowing when something falls into a relevant category. Jus
 ###Selectors
 **Selector Intent**  
 Poor selector intent is one of the biggest reasons for headaches in CSS projects. Using generic selectors to apply very specific treatments causes unexpected side effects and leads to tangled stylesheets. Instead use explicit and unambiguous selectors.
-`Bad: header ul {}
-Good: .site-nav {}`
+```css
+/* Bad */ 
+header ul {}
+
+/* Good */ 
+.site-nav {}
+```
  
 **Reusability**  
 With a component based approach to building the UI, reusability is paramount. Everything you choose, from the right type of selector to it’s name should lend itself toward being reused.
