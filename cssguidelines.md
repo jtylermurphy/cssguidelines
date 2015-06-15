@@ -31,12 +31,16 @@ Below are Best Practices and Guidelines that the Enterprise software UX group in
 .class2 { color: #fff; }
 ```
 - Comma separated property values get space between them, color values do not
-`background-color: rgba(0,0,0,.5);
-box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;`
+```css 
+.selector {
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;`
+}
+```
+
 - Never use leading 0’s on values, (ex `0.5px`)
 - Use lowercase hex values for colors. It’s easier to read. Also, use shorthand when possible. (bad: `#FAFEDC`, good: `#fafedc`, or `#fff`)
-- Put quotes around attributes values in selectors
-`input[type="text"]`
+- Put quotes around attributes values in selectors `input[type="text"]`
 - Don’t specify units for zero values (bad: `0px`, good: `0`)
 
 **Comments**  
