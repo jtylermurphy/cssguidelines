@@ -105,8 +105,8 @@ Titles should be followed by a return to space out following CSS code, and prece
  - Use dashes to separate words, don’t use underscores or camelCase
  - class names should be meaningful. Use structural over presentational names. Instead of focusing on semantics, look more closely at sensibility and longevity. Choose names based on ease of maintenance, not for their perceived meaning. Tying class name semantics to nature of content reduces the ability of architecture to scale or be easily put to use by other devs. TODO( Example )
     - Augment classes with data-ui-component attribute to house a more specific name. ex: 
-    `html 
-    <ul class=“tabbed-nav” data-ui-component=“Main Nav”>`
+    ```html 
+    <ul class=“tabbed-nav” data-ui-component=“Main Nav”>```
     - use `.js-*` classes to hook into for behavior. Keep these out of stylesheets though.
 
 **Naming Conventions**  
