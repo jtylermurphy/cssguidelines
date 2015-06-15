@@ -32,9 +32,11 @@ box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;`
 - Don’t specify units for zero values (bad: `0px`, good: `0`)
 
 **Comments**
+
 Write descriptive comments that convey context and purpose
 
 **Specificity**
+
 The key to solving a lot of CSS tangle and headaches is keeping specificity of your selectors as flat as possible. Overly specific selectors can cause a lot of damage.
  - Don’t use IDs in CSS
  - Don’t nest selectors - Using descendent and child selectors increase specificity. In general if you can avoid using them, don’t use them. Nested selectors can help with providing scope, and need to be used for scoping app/module styles, but an alternative in other scope cases is to use the BEM naming convention mentioned later.
@@ -43,9 +45,11 @@ The key to solving a lot of CSS tangle and headaches is keeping specificity of y
 
 
 **!important**
+
 Use `!important` proactively, not reactively. Use it to make sure nothing overwrites a declaration. i.e. `display: none !important;` If you find yourself having to use it to overwrite other styles something is probably wrong.
 
 **Shorthand**
+
 Try to limit use of shorthand declarations to instances where you must explicitly set all available values. Setting unnecessary values in shorthand leads to unnecessary overrides and unintended side effects.
 `/* Bad example */
 .element {
@@ -60,30 +64,35 @@ Try to limit use of shorthand declarations to instances where you must explicitl
 
 
 **Prefixed properties**
+
 Indent prefixed properties so declaration values line up:
 `-webkit-flex:
     -moz-flex:
          flex:`
 
 **Declaration Order**
+
 Group property declarations in following order:
 1. Positioning
 2. Box Model
 3. Typographic
 4. Visual
 
-Positioning comes first, it can override box-model styles.
-Box Model next as it sets dimensions and placement.
+Positioning comes first, it can override box-model styles.<br/>
+Box Model next as it sets dimensions and placement.<br/>
 The others affect things inside component so they come last.
 
 **Nesting**
+
 Limit nesting to when you must scope styles to a parent and if there are multiple items to be nested. (Exception, scoping for app/module styles)
 
 **Media Query Placement**
+
 When possible, place media queries as close to their relevant rule sets as possible. Keeping them together makes it harder to miss them.
 
 ###Organizing your CSS
 **Section titles**
+
 Major sections of CSS should start with a title. Title should begin with `#` to help with targeted searches. 
 Titles should be followed by a return to space out following CSS code, and preceded by 5 returns when not the first title in a document.
 `/*---------------#SECTION TITLE---------------*/
@@ -100,19 +109,23 @@ Titles should be followed by a return to space out following CSS code, and prece
     - use `.js-*` classes to hook into for behavior. Keep these out of stylesheets though.
 
 **Naming Conventions**
+
 Based on BEM methodology (https://en.bem.info/)
+
 BEM naming conventions help make css and HTML markup clear to developers by associating elements and modifiers with the blocks (component) they belong to.
 The trick with BEM is knowing when something falls into a relevant category. Just because something happens to live inside a block, doesn’t always mean it is actually a BEM element. It’s important to know when BEM scope starts and stops. As a rule, BEM applies to self-contained, discrete parts of the UI.
 
 **Block:** The sole root of the component
+
 **Element:** A component part of the Block
  - use double underscores to separate block name and element name: `block-name__element-name`
+
 **Modifier:** A variant or extension of the block
  - use double dashes to separate block name and modifier name: `block-name—modifier-name`
  
 **Examples:**
-`.btn {} /* Block */
-.btn__content {} /* Element */
+`.btn {} /* Block */<br/>
+.btn__content {} /* Element */<br/>
 .btn--big {} /* Modifier */`
 
 
