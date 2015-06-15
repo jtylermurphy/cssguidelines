@@ -101,17 +101,14 @@ Titles should be followed by a return to space out following CSS code, and prece
 
 ###Classes
 **Overview**
-
  - Write classes in lowercase
  - Use dashes to separate words, don’t use underscores or camelCase
  - class names should be meaningful. Use structural over presentational names. Instead of focusing on semantics, look more closely at sensibility and longevity. Choose names based on ease of maintenance, not for their perceived meaning. Tying class name semantics to nature of content reduces the ability of architecture to scale or be easily put to use by other devs. TODO( Example )
     - Augment classes with data-ui-component attribute to house a more specific name. ex: `<ul class=“tabbed-nav” data-ui-component=“Main Nav”>`
     - use `.js-*` classes to hook into for behavior. Keep these out of stylesheets though.
 
-**Naming Conventions**
-
-Based on BEM methodology (https://en.bem.info/)
-
+**Naming Conventions**  
+Based on BEM methodology (https://en.bem.info/)<br/>
 BEM naming conventions help make css and HTML markup clear to developers by associating elements and modifiers with the blocks (component) they belong to.
 The trick with BEM is knowing when something falls into a relevant category. Just because something happens to live inside a block, doesn’t always mean it is actually a BEM element. It’s important to know when BEM scope starts and stops. As a rule, BEM applies to self-contained, discrete parts of the UI.
 
@@ -124,20 +121,20 @@ The trick with BEM is knowing when something falls into a relevant category. Jus
  - use double dashes to separate block name and modifier name: `block-name—modifier-name`
  
 **Examples:**
-`.btn {} /* Block */<br/>
-.btn__content {} /* Element */<br/>
+`.btn {} /* Block */  
+.btn__content {} /* Element */  
 .btn--big {} /* Modifier */`
 
 
 
 ###Selectors
-**Selector Intent**
+**Selector Intent**  
 Poor selector intent is one of the biggest reasons for headaches in CSS projects. Using generic selectors to apply very specific treatments causes unexpected side effects and leads to tangled stylesheets. Instead use explicit and unambiguous selectors.
 `Bad: header ul {}
 Good: .site-nav {}`
  
-**Reusability**
+**Reusability**  
 With a component based approach to building the UI, reusability is paramount. Everything you choose, from the right type of selector to it’s name should lend itself toward being reused.
  
-**Selector Performance**
+**Selector Performance**  
 In general. The longer a selector is (the more component parts) the slower it is. `body.home div.header ul {}` is a lot slower than `.primary-nav {}`
